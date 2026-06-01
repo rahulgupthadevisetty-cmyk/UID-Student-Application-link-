@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartPhone Brand</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#fff;
+      color:#111;
+    }
+
+    header{
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      background:white;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#0057ff;
+    }
+
+    nav a{
+      margin-left:25px;
+      text-decoration:none;
+      color:#222;
+      font-weight:500;
+    }
+
+    .hero{
+      height:100vh;
+      background:linear-gradient(to right,#eef4ff,#ffffff);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 8%;
+    }
+
+    .hero-text{
+      max-width:500px;
+    }
+
+    .hero-text h1{
+      font-size:60px;
+      margin-bottom:20px;
+    }
+
+    .hero-text p{
+      font-size:18px;
+      line-height:1.6;
+      color:#555;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      padding:14px 30px;
+      background:#0057ff;
+      color:white;
+      border:none;
+      border-radius:30px;
+      cursor:pointer;
+      font-size:16px;
+    }
+
+    .hero img{
+      width:450px;
+      animation:float 3s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%{transform:translateY(0);}
+      50%{transform:translateY(-15px);}
+      100%{transform:translateY(0);}
+    }
+
+    .products{
+      padding:100px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:40px;
+      margin-bottom:50px;
+    }
+
+    .product-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:20px;
+      padding:25px;
+      text-align:center;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      max-width:220px;
+    }
+
+    .card h3{
+      margin:20px 0 10px;
+    }
+
+    .card p{
+      color:#666;
+      margin-bottom:15px;
+    }
+
+    footer{
+      background:#111;
+      color:white;
+      padding:40px 8%;
+      text-align:center;
+      margin-top:50px;
+    }
+
+    @media(max-width:768px){
+
+      .hero{
+        flex-direction:column;
+        text-align:center;
+        justify-content:center;
+      }
+
+      .hero img{
+        width:300px;
+        margin-top:40px;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      nav{
+        display:none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">VIVO</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Features</a>
+      <a href="#">Support</a>
+      <a href="#">E-store</a>
+      <a href="#">vivo Exclusive store</a>
+      <a href="#">vivo Newsroom</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+
+    <div class="hero-text">
+      <h1>Photography Redefined</h1>
+
+      <p>
+        Experience flagship performance, elegant design,
+        and advanced mobile photography technology.
+      </p>
+
+      <button class="btn">Explore Now</button>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1000"
+      alt="phone">
+  </section>
+
+  <section class="products">
+
+    <h2 class="section-title">Latest Smartphones</h2>
+
+    <div class="product-grid">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=1000">
+        <h3>X Series</h3>
+        <p>Premium flagship performance.</p>
+        <button class="btn">View</button>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?q=80&w=1000">
+        <h3>T Series</h3>
+        <p>Professional portrait photography.</p>
+        <button class="btn">View</button>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1567581935884-3349723552ca?q=80&w=1000">
+        <h3>Y Series</h3>
+        <p>Affordable and powerful smartphones.</p>
+        <button class="btn">View</button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Smartphone Brand. All rights reserved.
+  </footer>
+
+</body>
+</html>
